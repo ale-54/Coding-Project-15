@@ -43,6 +43,7 @@ resolveButton.addEventListener("click", function(event) {
     riskDashboard.appendChild(riskCard);
 
 }
+
 //Task 2 - Test Cases
 addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
@@ -51,3 +52,5 @@ addRiskItem("Market Fluctuations", "High", "Finance"); //Clicking "Resolve" shou
 //Task 4 - Test Cases
 addRiskItem("Cybersecurity Threat", "High", "IT");
 addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+//Task 5 - Test Cases
+addRiskItem("Employee Retention", "Low", "HR"); //Clicking "Increase Risk Levels" should change it to "Medium".
