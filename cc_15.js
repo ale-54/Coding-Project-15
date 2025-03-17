@@ -19,6 +19,11 @@ function addRiskItem(riskName, riskLevel, department) {
     const dept = document.createElement("p");
     dept.textContent = `Department: ${department}`;
 
+   // Task 6: Handling Event Propagation
+   riskCard.addEventListener("click", (event) => {
+    event.stopPropagation();
+}); //Click inside a risk card should not trigger a dashboard-wide event.
+
 //Task 4: Categorizing Risks by Level
     if (riskLevel === "Low") {
         riskCard.style.backgroundColor = "lightgreen"; //i wanted a light green color for low risk
