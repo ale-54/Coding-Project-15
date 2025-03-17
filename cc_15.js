@@ -19,6 +19,15 @@ function addRiskItem(riskName, riskLevel, department) {
     const dept = document.createElement("p");
     dept.textContent = `Department: ${department}`;
 
+//Task 4: Categorizing Risks by Level
+    if (riskLevel === "Low") {
+        riskCard.style.backgroundColor = "lightgreen"; //i wanted a light green color for low risk
+    } else if (riskLevel === "Medium") {
+        riskCard.style.backgroundColor = "yellow";
+    } else if (riskLevel === "High") {
+        riskCard.style.backgroundColor = "red";
+    }
+
 //Task 3: Removing Risk Items
 const resolveButton = document.createElement("button");
 resolveButton.textContent = "Resolve";
@@ -39,3 +48,6 @@ addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
 //Task 3 - Test Cases
 addRiskItem("Market Fluctuations", "High", "Finance"); //Clicking "Resolve" should remove this risk from the dashboard.
+//Task 4 - Test Cases
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
